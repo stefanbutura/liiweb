@@ -16,7 +16,7 @@ before_install:
 
 script:
   - cd $TRAVIS_BUILD_DIR
-  - composer require drupal/entity_browser --dev -y
+  - composer require drupal/entity_browser --dev
   - cd web
   - ./../vendor/bin/drush site-install --existing-config --verbose --yes --db-url=sqlite://tmp/site.sqlite
   - ./../vendor/bin/drush runserver $SIMPLETEST_BASE_URL &

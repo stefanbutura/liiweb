@@ -73,8 +73,6 @@ class LiiWebApiUtils {
    * @throws \Drupal\Component\Plugin\Exception\PluginNotFoundException
    */
   public function getRevisionFromFrbrUri($uri) {
-    $this->getNodeFromFrbrUri($uri);
-
     $result = $this->database->query("
     SELECT entity_id, revision_id, langcode
     FROM node_revision__field_frbr_uri
